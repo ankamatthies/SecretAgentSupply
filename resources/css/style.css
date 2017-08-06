@@ -199,6 +199,15 @@ footer span {
     padding: 0;
   }
 
+  /* header section */
+  .logo span {
+    display: none;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
   /*main banner section */
     .banner {
     height: 15rem;
@@ -207,6 +216,7 @@ footer span {
   /* new arrival section */
   .newarrival {
     width: 100%;
+    padding-bottom: 1rem;
   }
 
   .newarrival h4 {
@@ -230,6 +240,8 @@ footer span {
     margin: auto;
   }
 
+/* info section */
+
   #info {
   flex-direction: column;
   align-items: center;
@@ -238,6 +250,8 @@ footer span {
   .logistics {
     width: 90%;
   }
+
+/*footer section */
 
   footer span {
     text-align: center;
