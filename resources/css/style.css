@@ -1,5 +1,7 @@
+/* General styling */
+
 html {
-  font-size: 18px;
+  font-size: 18px; /*sets base font size*/
   font-family: Helvetica;
 }
 
@@ -8,8 +10,9 @@ html {
   color: white;
 }
 
+/* general container used for whole site */
+
 .container {
-  /* general container used for whole site */
   max-width: 960px;
   margin: auto;
 }
@@ -25,8 +28,7 @@ header {
   align-items: center;
   color: white;
   background-color: black;
-  padding-top: 0.66rem;
-  padding-bottom: 0.66rem;
+  padding-top: 0.66rem 0;
 }
 
 .logo img {
@@ -129,7 +131,7 @@ nav {
 
 /* info section (location + hours) */
 
-.info {
+#info {
   display: flex;
   justify-content: space-between;
   padding-top: 3rem;
@@ -164,19 +166,11 @@ footer span {
   color: white;
 }
 
-/* media queries */
+/* media queries for less than 1024px*/
 
 @media only screen and (max-width: 1024px) {
-  /* media query for screen < 1024px - products section */
-  #product_sunglasses {
-    display: none;
-  }
-  .product {
-    width: 47%;
-  }
 
-  @media only screen and (max-width: 1024px) {
-    /* media query for screen < 1024px - nav section */
+  /* nav section */
   .reg_nav {
     display: none;
   }
@@ -186,32 +180,47 @@ footer span {
     justify-content: center;
   }
 
+/* product section styling */
+
+#product_sunglasses {
+  display: none;
 }
 
+.product {
+  width: 47%;
+}
+
+
+/* media query for screen < 470px */
+
 @media only screen and (max-width: 470px) {
-  /* media query for screen < 470px - main banner section */
+
+  .container {
+    padding: 0;
+  }
+
+  /*main banner section */
     .banner {
     height: 15rem;
   }
 
-}
-
-@media only screen and (max-width: 470px) {
-  /* media query for screen < 470px - new arrival section */
+  /* new arrival section */
   .newarrival {
     width: 100%;
   }
+
   .newarrival h4 {
     font-size: 0.77rem;
     font-weight: bold;
   }
+
   .newarrival h1 {
     font-size: 1rem;
     font-weight: bold;
   }
 
-  @media only screen and (max-width: 470px) {
-    /* media query for screen < 470px - product section */
+    /* product section */
+
     #product_watch {
       display: none;
     }
@@ -220,14 +229,18 @@ footer span {
     width: 90%;
     margin: auto;
   }
-}
 
-  @media only screen and (max-width: 470px) {
-    /* media query for screen < 470px - info section */
-    .info {
-      flex-wrap: wrap;
-      width: 90%;
-      margin: 0.5 rem auto;
-    }
-
+  #info {
+  flex-direction: column;
+  align-items: center;
   }
+
+  .logistics {
+    width: 90%;
+  }
+
+  footer span {
+    text-align: center;
+    display: block;
+  }
+}
